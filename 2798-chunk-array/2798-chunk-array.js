@@ -4,11 +4,11 @@
  * @return {Array}
  */
 var chunk = function(arr, size) {
-    const chunked = []
-    let index = 0
-    while (index < arr.length) {
-        chunked.push(arr.slice(index, size + index))
-        index += size
+    let a=[]
+    let i=0
+    while(i<arr.length){
+        a.push(arr.slice(i,i+size))
+        i+=size
     }
-    return chunked
+    return a
 };
