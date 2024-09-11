@@ -3,10 +3,9 @@
  * @return {number}
  */
 var scoreOfString = function(s) {
-    let arr = s.split('').map(el => el.charCodeAt())
-    let arr2 = []
-    for(let i = 1; i < arr.length; i++) {
-        arr2.push(Math.abs(arr[i] - arr[i-1]))
+    let res  = 0
+    for(let i = 0; i < s.length-1; i++ ) {
+        res += Math.abs(s[i].charCodeAt()-s[i+1].charCodeAt())
     }
-    return arr2.reduce((acc, el) => acc + el)
+    return res
 };
