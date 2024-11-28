@@ -3,15 +3,13 @@
  * @return {number[]}
  */
 var plusOne = function (digits) {
-    let lastNum = digits.length 
-    console.log(lastNum);
-    for(let i = lastNum-1;i >=0; i--) {
-        if(digits[i] < 9) {
-            digits[i]++
+    for(let i = digits.length-1; i >= 0; i--) {
+        digits[i] += 1
+        if(digits[i] < 10) {
             return digits
-        }
-     digits[i] = 0
-    }
+        } 
+        digits[i] = 0
+    }    
     digits.unshift(1)
     return digits
 };
